@@ -1,3 +1,3 @@
-global.lists = [];
+global.items = [];
 
-module.exports = lists;
+module.exports = items;

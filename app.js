@@ -4,7 +4,7 @@ const listRoutes = require("./routes/list");
 const ExpressError = require("./expressError");
 
 app.use(express.json());
-app.use("/list", listRoutes);
+app.use("/items", listRoutes);
 
 //404 handler
 
@@ -14,7 +14,7 @@ app.use(function (req, res, next) {
 
 //general error handler
 
-app.use((err, req, req, next) => {
+app.use((err, req, res, next) => {
   res.status(err.status || 500);
 
   return res.json({
